@@ -16,7 +16,7 @@ Where `my_prospect` is the company name of the prospect
 ## Review the execution plan
 
 ```
-$ terraform plan -var="access_token=abc123" 
+$ terraform plan -var="access_token=abc123" -var="namespace=<tenant_namespace>"
 ```
 
 Where `access_token` is the SignalFx Access Token and `realm` is either `eu0`, `us0`, `us1` or `us2`
@@ -24,7 +24,7 @@ Where `access_token` is the SignalFx Access Token and `realm` is either `eu0`, `
 ## Apply the changes
 
 ```
-$ terraform apply -var="access_token=abc123"
+$ terraform apply -var="access_token=abc123" -var="namespace=<tenant_namespace>"
 ```
 
 ## Destroy everything!
@@ -37,7 +37,7 @@ $ terraform workspace select my_prospect
 Where `my_prospect` is the company name of the prospect
 
 ```
-$ terraform destroy -var="access_token=abc123" 
+$ terraform destroy -var="access_token=abc123" -var="namespace=<tenant_namespace>"
 ```
 
 # Deploying a module
